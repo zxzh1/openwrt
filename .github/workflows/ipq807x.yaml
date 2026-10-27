@@ -50,18 +50,15 @@ jobs:
 
             - name: Build tools
               run: |
-                make tools/install -j1 V=s || \
-                make tools/install V=s
+                make tools/install -j1 V=s
 
             - name: Build toolchain
               run: |
-                make toolchain/install -j1 V=s || \
-                make toolchain/install V=s
+                make toolchain/install -j1 V=s
 
             - name: Build target images
               run: |
-                make -j1 V=s || \
-                make V=s
+                make -j1 V=s
 
     release:
         name: Make a release
